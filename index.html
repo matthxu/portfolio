@@ -13,6 +13,7 @@
 
 <body>
 
+<!-- Fixed top navigation -->
 <nav>
   <a href="#" class="nav-logo">Matthew Xu</a>
   <ul>
@@ -23,8 +24,9 @@
   </ul>
 </nav>
 
-<!-- HERO: split layout -->
+<!-- HERO: first-screen introduction with identity, value statement, and quick actions -->
 <div class="hero" id="home">
+  <!-- Left side: location, name lockup, and scroll cue -->
   <div class="hero-left">
     <div class="hero-eyebrow">Based in Melbourne, AU</div>
     <h1 class="hero-name">
@@ -33,6 +35,7 @@
     </h1>
     <div class="hero-scroll-hint">Scroll</div>
   </div>
+  <!-- Right side: short positioning statement, contact shortcuts, and CTA buttons -->
   <div class="hero-right">
     <div class="hero-right-top">
       <h2 class="hero-statement">Building things that<br><em>actually work</em></h2>
@@ -50,7 +53,7 @@
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT: background, education, interests, and current availability -->
 <section id="about">
   <div class="sec-label">About</div>
   <div class="about-grid">
@@ -73,52 +76,96 @@
   </div>
 </section>
 
-<!-- WORK -->
+<!-- WORK: expandable project list with contribution details and relevant links -->
 <section id="work">
   <div style="text-transform: uppercase; font-size: 11px; margin-bottom: 3rem;">Selected Work</div>
   
-  <a href="#" class="project-item">
-    <span>2026</span>
-    <div>
-      <div class="project-title">Tecket Event Management</div>
-      <p style="color: var(--fg-muted); font-size: 13px;">Full-stack User History module for real-world clients using Vue.js and Prisma.</p>
-      <div><span class="tag">VUE.JS</span><span class="tag">PRISMA</span><span class="tag">AGILE</span></div>
+  <!-- Project 1: client-facing event platform work -->
+  <div class="project-container reveal">
+    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+      <span>2026</span>
+      <div>
+        <div class="project-title">Tecket Event Management</div>
+        <div><span class="tag">VUE.JS</span><span class="tag">PRISMA</span><span class="tag">AGILE</span></div>
+      </div>
+      <span class="project-arrow">↓</span>
+    </a>
+    <div class="project-details">
+      <div class="details-content">
+        <p><strong>Contributions:</strong> Engineered a full-stack User History module using Vue.js and a Node.js/Express REST API. Utilized Prisma ORM for complex MySQL querying and resolved critical Git version control conflicts during repository restructures. Collaborated directly with clients to define and deliver production-ready software.</p>
+        <div class="details-links">
+          <a href="#" class="hero-link">Live Project ↗</a>
+          <span class="private-repo">Repo Private (Client Work)</span>
+        </div>
+      </div>
     </div>
-    <span style="text-align: right;">↗</span>
-  </a>
+  </div>
 
-  <a href="#" class="project-item">
-    <span>2025</span>
-    <div>
-      <div class="project-title">AI Phishing Detection</div>
-      <p style="color: var(--fg-muted); font-size: 13px;">Machine learning classifier with an asynchronous Python FastAPI backend and scikit-learn models.</p>
-      <div><span class="tag">PYTHON</span><span class="tag">ML</span><span class="tag">FASTAPI</span></div>
+  <!-- Project 2: machine learning phishing classifier -->
+  <div class="project-container reveal">
+    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+      <span>2025</span>
+      <div>
+        <div class="project-title">AI Phishing Detection</div>
+        <div><span class="tag">PYTHON</span><span class="tag">ML</span><span class="tag">FASTAPI</span></div>
+      </div>
+      <span class="project-arrow">↓</span>
+    </a>
+    <div class="project-details">
+      <div class="details-content">
+        <p><strong>Contributions:</strong> Built a full-stack application implementing a RandomForestClassifier model. Linked an automated Scikit-Learn model to asynchronous FastAPI endpoints to serve real-time predictions.</p>
+        <div class="details-links">
+          <a href="#" class="hero-link">Live Demo ↗</a>
+          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+        </div>
+      </div>
     </div>
-    <span style="text-align: right;">↗</span>
-  </a>
+  </div>
 
-  <a href="#" class="project-item">
-    <span>2025</span>
-    <div>
-      <div class="project-title">OOP Trivia Engine</div>
-      <p style="color: var(--fg-muted); font-size: 13px;">C# application demonstrating all four OOP principles with abstract base classes and polymorphism.</p>
-      <div><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP DESIGN</span></div>
+  <!-- Project 3: object-oriented programming showcase -->
+  <div class="project-container reveal">
+    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+      <span>2025</span>
+      <div>
+        <div class="project-title">OOP Trivia Engine</div>
+        <div><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP DESIGN</span></div>
+      </div>
+      <span class="project-arrow">↓</span>
+    </a>
+    <div class="project-details">
+      <div class="details-content">
+        <p>A C# CLI application demonstrating inheritance, polymorphism, encapsulation, and abstraction through a custom question-mapping engine.</p>
+        <div class="details-links">
+          <a href="#" class="hero-link">Documentation ↗</a>
+          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+        </div>
+      </div>
     </div>
-    <span style="text-align: right;">↗</span>
-  </a>
+  </div>
 
-  <a href="#" class="project-item">
-    <span>2026</span>
-    <div>
-      <div class="project-title">Smart Sticky Notes</div>
-      <p style="color: var(--fg-muted); font-size: 13px;">AI-powered note application with natural language organisation and context-aware suggestions powered by Claude.</p>
-      <div><span class="tag">REACT</span><span class="tag">TYPESCRIPT</span><span class="tag">CLAUDE API</span></div>
+  <!-- Project 4: AI-assisted note-taking app -->
+  <div class="project-container reveal">
+    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+      <span>2026</span>
+      <div>
+        <div class="project-title">Smart Sticky Notes</div>
+        <div><span class="tag">REACT</span><span class="tag">TYPESCRIPT</span><span class="tag">CLAUDE API</span></div>
+      </div>
+      <span class="project-arrow">↓</span>
+    </a>
+    <div class="project-details">
+      <div class="details-content">
+        <p>AI-powered note application featuring natural language organization and context-aware suggestions integrated with the Claude API.</p>
+        <div class="details-links">
+          <a href="#" class="hero-link">Live App ↗</a>
+          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+        </div>
+      </div>
     </div>
-    <span style="text-align: right;">↗</span>
-  </a>
+  </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS: grouped summary of languages, frameworks, and tools -->
 <section id="skills">
   <div class="sec-label">Skills</div>
   <div class="skills-grid">
@@ -156,7 +203,7 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT: direct channels for collaboration and networking -->
 <section id="contact">
   <div class="sec-label">Contact</div>
   <div class="contact-grid">
@@ -172,15 +219,17 @@
   </div>
 </section>
 
+<!-- Footer: location and copyright year -->
 <footer>
   <span>Matthew Xu — Melbourne, AU</span>
   <span>2026</span>
 </footer>
 
-<!-- custom cursor -->
+<!-- Custom cursor layers for interactive pointer effect -->
 <div id="cur"></div>
 <div id="cur-r"></div>
 
+<!-- Page behavior: cursor and reveal interactions -->
 <script src="scripts.js"></script>
 </body>
 </html>

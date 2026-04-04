@@ -402,6 +402,55 @@ section { padding: 6rem 4rem; }
     display: inline-block;
 }
 
+.project-container {
+    border-bottom: 1px solid var(--border);
+}
+
+.project-item {
+    border-bottom: none !important; /* Move border to container */
+}
+
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(0,0,0,0.02);
+}
+
+.details-content {
+    padding: 0 100px 2.5rem 100px; /* Aligns with the title in grid */
+    max-width: 800px;
+}
+
+.details-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--fg-muted);
+    margin-bottom: 1.5rem;
+}
+
+.details-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.private-repo {
+    font-size: 11px;
+    color: var(--fg-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-item.active .project-arrow {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+.project-arrow {
+    transition: transform 0.3s ease;
+}
+
 /* Skills */
 .skills-grid {
     display: grid;

@@ -1,3 +1,4 @@
+// Cursor: cache elements and track pointer/ring positions
 const cur = document.getElementById("cur")
 const curR = document.getElementById("cur-r")
 let mx = 0,
@@ -5,6 +6,7 @@ let mx = 0,
     rx = 0,
     ry = 0
 
+// Cursor dot follows the mouse directly
 document.addEventListener("mousemove", (e) => {
     mx = e.clientX
     my = e.clientY
@@ -12,6 +14,7 @@ document.addEventListener("mousemove", (e) => {
     cur.style.top = my + "px"
 })
 
+// Cursor ring eases toward the mouse for a trailing effect
 ;(function tick() {
     rx += (mx - rx) * 0.12
     ry += (my - ry) * 0.12
@@ -20,6 +23,7 @@ document.addEventListener("mousemove", (e) => {
     requestAnimationFrame(tick)
 })()
 
+// Interactive hover feedback for links and buttons
 document.querySelectorAll("a,button").forEach((el) => {
     el.addEventListener("mouseenter", () => {
         cur.style.width = "10px"
@@ -37,6 +41,7 @@ document.querySelectorAll("a,button").forEach((el) => {
     })
 })
 
+// Reveal animation: adds .visible when elements enter viewport
 const obs = new IntersectionObserver(
     (entries) => {
         entries.forEach((e, i) => {
@@ -47,3 +52,21 @@ const obs = new IntersectionObserver(
 )
 
 document.querySelectorAll(".reveal").forEach((el) => obs.observe(el))
+
+// Work section accordion: expand selected project and collapse others
+function toggleProject(element) {
+    const container = element.parentElement
+    const details = container.querySelector(".project-details")
+    const isOpening = !element.classList.contains("active")
+
+    // Close any currently open project first (single-open accordion behavior)
+    document.querySelectorAll(".project-item").forEach((item) => {
+        item.classList.remove("active")
+        item.parentElement.querySelector(".project-details").style.maxHeight = null
+    })
+
+    if (isOpening) {
+        element.classList.add("active")
+        details.style.maxHeight = details.scrollHeight + "px"
+    }
+}
