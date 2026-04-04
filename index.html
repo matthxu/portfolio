@@ -1,235 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matthew Xu</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="styles.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Matthew Xu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="./styles.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400&family=Fira+Code:wght@300;400&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=DM+Mono:wght@300;400&display=swap"
+            rel="stylesheet" />
+    </head>
 
-</head>
+    <body>
+        <!-- Fixed top navigation -->
+        <nav>
+            <a href="#" class="nav-logo">Matthew Xu</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-<body>
-
-<!-- Fixed top navigation -->
-<nav>
-  <a href="#" class="nav-logo">Matthew Xu</a>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO: first-screen introduction with identity, value statement, and quick actions -->
-<div class="hero" id="home">
-  <!-- Left side: location, name lockup, and scroll cue -->
-  <div class="hero-left">
-    <div class="hero-eyebrow">Based in Melbourne, AU</div>
-    <h1 class="hero-name">
-      Matthew
-      <em>Xu</em>
-    </h1>
-    <div class="hero-scroll-hint">Scroll</div>
-  </div>
-  <!-- Right side: short positioning statement, contact shortcuts, and CTA buttons -->
-  <div class="hero-right">
-    <div class="hero-right-top">
-      <h2 class="hero-statement">Building things that<br><em>actually work</em></h2>
-      <p>CS graduate with a focus on full-stack development and software. Currently shipping production code for event management systems.</p>
-      <div class="hero-contact-links">
-        <!-- <a href="mailto:matthew.xu191@gmail.com" class="hero-link">matthew.xu191@gmail.com</a> -->
-        <!-- <a href="https://github.com/matthxu" class="hero-link" target="_blank">GitHub</a> -->
-        <a href="#" class="hero-link" target="_blank">Resume</a>
-      </div>
-    </div>
-    <div class="hero-right-bottom">
-      <a href="#work" class="btn-solid">View Work</a>
-      <a href="#contact" class="btn-line">Contact ↗</a>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT: background, education, interests, and current availability -->
-<section id="about">
-  <div class="sec-label">About</div>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <h2>Building things that work<br><em>in the real world</em></h2>
-      <p>I'm a Computer Science student at Swinburne University of Technology, majoring in Software Development. I care about writing code that's well-structured and maintainable — not just code that runs.</p>
-      <p>Outside of tech, I enjoy climbing and cycling. I was awarded the New Colombo Plan Scholarship for academic excellence which took me to Japan.</p>
-    </div>
-    <div class="about-meta reveal">
-      <div class="meta-row"><span class="meta-key">Degree</span><span>B.Sc Computer Science (Software Development)</span></div>
-      <div class="meta-row"><span class="meta-key">University</span><span>Swinburne University of Technology</span></div>
-      <div class="meta-row"><span class="meta-key">GPA</span><span>3.417 / 4.0 (WAM: 78)</span></div>
-      <div class="meta-row"><span class="meta-key">Location</span><span>Melbourne, VIC</span></div>
-      <div class="meta-row"><span class="meta-key">Available</span><span>July 2026</span></div>
-      <div class="meta-row">
-        <span class="meta-key">Interests</span>
-        <span><span class="chip">Cybersecurity</span><span class="chip">AI / ML</span><span class="chip">Full Stack</span><span class="chip">OOP</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK: expandable project list with contribution details and relevant links -->
-<section id="work">
-  <div style="text-transform: uppercase; font-size: 11px; margin-bottom: 3rem;">Selected Work</div>
-  
-  <!-- Project 1: client-facing event platform work -->
-  <div class="project-container reveal">
-    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
-      <span>2026</span>
-      <div>
-        <div class="project-title">Tecket Event Management</div>
-        <div><span class="tag">VUE.JS</span><span class="tag">PRISMA</span><span class="tag">AGILE</span></div>
-      </div>
-      <span class="project-arrow">↓</span>
-    </a>
-    <div class="project-details">
-      <div class="details-content">
-        <p><strong>Contributions:</strong> Engineered a full-stack User History module using Vue.js and a Node.js/Express REST API. Utilized Prisma ORM for complex MySQL querying and resolved critical Git version control conflicts during repository restructures. Collaborated directly with clients to define and deliver production-ready software.</p>
-        <div class="details-links">
-          <a href="#" class="hero-link">Live Project ↗</a>
-          <span class="private-repo">Repo Private (Client Work)</span>
+        <!-- HERO: first-screen introduction with identity, value statement, and quick actions -->
+        <div class="hero" id="home">
+            <!-- Left side: location, name lockup, and scroll cue -->
+            <div class="hero-left">
+                <div class="hero-eyebrow">Based in Melbourne, AU</div>
+                <h1 class="hero-name">
+                    Matthew
+                    <em>Xu</em>
+                </h1>
+                <div class="hero-scroll-hint">Scroll</div>
+            </div>
+            <!-- Right side: short positioning statement, contact shortcuts, and CTA buttons -->
+            <div class="hero-right">
+                <div class="hero-right-top">
+                    <h2 class="hero-statement">Building things that<br /><em>actually work</em></h2>
+                    <p>
+                        CS graduate with a focus on full-stack development and software. Currently shipping production code for event
+                        management systems.
+                    </p>
+                    <div class="hero-contact-links">
+                        <!-- <a href="mailto:matthew.xu191@gmail.com" class="hero-link">matthew.xu191@gmail.com</a> -->
+                        <!-- <a href="https://github.com/matthxu" class="hero-link" target="_blank">GitHub</a> -->
+                        <a href="#" class="hero-link" target="_blank">Resume</a>
+                    </div>
+                </div>
+                <div class="hero-right-bottom">
+                    <a href="#work" class="btn-solid">View Work</a>
+                    <a href="#contact" class="btn-line">Contact ↗</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Project 2: machine learning phishing classifier -->
-  <div class="project-container reveal">
-    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
-      <span>2025</span>
-      <div>
-        <div class="project-title">AI Phishing Detection</div>
-        <div><span class="tag">PYTHON</span><span class="tag">ML</span><span class="tag">FASTAPI</span></div>
-      </div>
-      <span class="project-arrow">↓</span>
-    </a>
-    <div class="project-details">
-      <div class="details-content">
-        <p><strong>Contributions:</strong> Built a full-stack application implementing a RandomForestClassifier model. Linked an automated Scikit-Learn model to asynchronous FastAPI endpoints to serve real-time predictions.</p>
-        <div class="details-links">
-          <a href="#" class="hero-link">Live Demo ↗</a>
-          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
+        <!-- ABOUT: background, education, interests, and current availability -->
+        <section id="about">
+            <div class="sec-label">About</div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2>Building things that work<br /><em>in the real world</em></h2>
+                    <p>
+                        I'm a Computer Science student at Swinburne University of Technology, majoring in Software Development. I care about
+                        writing code that's well-structured and maintainable — not just code that runs.
+                    </p>
+                    <p>
+                        Outside of tech, I enjoy climbing and cycling. I was awarded the New Colombo Plan Scholarship for academic
+                        excellence which took me to Japan.
+                    </p>
+                </div>
+                <div class="about-meta reveal">
+                    <div class="meta-row">
+                        <span class="meta-key">Degree</span><span>B.Sc Computer Science (Software Development)</span>
+                    </div>
+                    <div class="meta-row"><span class="meta-key">University</span><span>Swinburne University of Technology</span></div>
+                    <div class="meta-row"><span class="meta-key">GPA</span><span>3.417 / 4.0 (WAM: 78)</span></div>
+                    <div class="meta-row"><span class="meta-key">Location</span><span>Melbourne, VIC</span></div>
+                    <div class="meta-row"><span class="meta-key">Available</span><span>July 2026</span></div>
+                    <div class="meta-row">
+                        <span class="meta-key">Interests</span>
+                        <span
+                            ><span class="chip">Cybersecurity</span><span class="chip">AI / ML</span><span class="chip">Full Stack</span
+                            ><span class="chip">OOP</span></span
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Project 3: object-oriented programming showcase -->
-  <div class="project-container reveal">
-    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
-      <span>2025</span>
-      <div>
-        <div class="project-title">OOP Trivia Engine</div>
-        <div><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP DESIGN</span></div>
-      </div>
-      <span class="project-arrow">↓</span>
-    </a>
-    <div class="project-details">
-      <div class="details-content">
-        <p>A C# CLI application demonstrating inheritance, polymorphism, encapsulation, and abstraction through a custom question-mapping engine.</p>
-        <div class="details-links">
-          <a href="#" class="hero-link">Documentation ↗</a>
-          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
+        <!-- WORK: expandable project list with contribution details and relevant links -->
+        <section id="work">
+            <div style="text-transform: uppercase; font-size: 11px; margin-bottom: 3rem">Selected Work</div>
 
-  <!-- Project 4: AI-assisted note-taking app -->
-  <div class="project-container reveal">
-    <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
-      <span>2026</span>
-      <div>
-        <div class="project-title">Smart Sticky Notes</div>
-        <div><span class="tag">REACT</span><span class="tag">TYPESCRIPT</span><span class="tag">CLAUDE API</span></div>
-      </div>
-      <span class="project-arrow">↓</span>
-    </a>
-    <div class="project-details">
-      <div class="details-content">
-        <p>AI-powered note application featuring natural language organization and context-aware suggestions integrated with the Claude API.</p>
-        <div class="details-links">
-          <a href="#" class="hero-link">Live App ↗</a>
-          <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- Project 1: client-facing event platform work -->
+            <div class="project-container reveal">
+                <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+                    <span>2026</span>
+                    <div>
+                        <div class="project-title">Tecket Event Management</div>
+                        <div>
+                            <span class="tag">TYPESCRIPT</span><span class="tag">VUE.JS</span><span class="tag">PRISMA</span
+                            ><span class="tag">AGILE</span>
+                        </div>
+                    </div>
+                    <span class="project-arrow">↓</span>
+                </a>
+                <div class="project-details">
+                    <div class="details-content">
+                        <p>
+                            <strong>Contributions:</strong> Engineered a full-stack User History module using Vue.js and a Node.js/Express
+                            REST API. Utilized Prisma ORM for complex MySQL querying and resolved critical Git version control conflicts
+                            during repository restructures. Collaborated directly with clients to define and deliver production-ready
+                            software.
+                        </p>
+                        <div class="details-links">
+                            <a href="#" class="hero-link">Live Project ↗</a>
+                            <span class="private-repo">Repo Private (Client Work)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- SKILLS: grouped summary of languages, frameworks, and tools -->
-<section id="skills">
-  <div class="sec-label">Skills</div>
-  <div class="skills-grid">
-    <div class="skill-group reveal">
-      <h3>Languages</h3>
-      <ul class="skill-list">
-        <li>JavaScript / TypeScript</li>
-        <li>Python</li>
-        <li>C# / C++</li>
-        <li>SQL</li>
-        <li>PHP</li>
-        <li>HTML / CSS</li>
-      </ul>
-    </div>
-    <div class="skill-group reveal">
-      <h3>Frameworks & Libraries</h3>
-      <ul class="skill-list">
-        <li>React.js</li>
-        <li>Vue.js</li>
-        <li>Node.js / Express.js</li>
-        <li>FastAPI</li>
-        <li>Tailwind / Bootstrap</li>
-      </ul>
-    </div>
-    <div class="skill-group reveal">
-      <h3>Databases & Tools</h3>
-      <ul class="skill-list">
-        <li>MySQL</li>
-        <li>Docker</li>
-        <li>Git / GitHub</li>
-        <li>Jira / Agile</li>
-        <li>Vercel</li>
-      </ul>
-    </div>
-  </div>
-</section>
+            <!-- Project 2: machine learning phishing classifier -->
+            <div class="project-container reveal">
+                <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+                    <span>2025</span>
+                    <div>
+                        <div class="project-title">AI Phishing Detection</div>
+                        <div><span class="tag">PYTHON</span><span class="tag">ML</span><span class="tag">FASTAPI</span></div>
+                    </div>
+                    <span class="project-arrow">↓</span>
+                </a>
+                <div class="project-details">
+                    <div class="details-content">
+                        <p>
+                            <strong>Contributions:</strong> Built a full-stack application implementing a RandomForestClassifier model.
+                            Linked an automated Scikit-Learn model to asynchronous FastAPI endpoints to serve real-time predictions.
+                        </p>
+                        <div class="details-links">
+                            <a href="#" class="hero-link">Live Demo ↗</a>
+                            <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- CONTACT: direct channels for collaboration and networking -->
-<section id="contact">
-  <div class="sec-label">Contact</div>
-  <div class="contact-grid">
-    <div class="reveal">
-      <h2 class="contact-title">Let's work<br><em>together</em></h2>
-    </div>
-    <div class="reveal">
-      <a href="mailto:matthew.xu191@gmail.com" class="c-link"><span>matthew.xu191@gmail.com</span><span class="c-arr">↗</span></a>
-      <a href="https://github.com/matthxu" class="c-link" target="_blank"><span>GitHub — matthxu</span><span class="c-arr">↗</span></a>
-      <a href="https://www.linkedin.com/in/mxu00/" class="c-link" target="_blank"><span>LinkedIn</span><span class="c-arr">↗</span></a>
-      <a href="" class="c-link" target="_blank"><span>Download Resume</span><span class="c-arr">↗</span></a>
-    </div>
-  </div>
-</section>
+            <!-- Project 3: object-oriented programming showcase -->
+            <div class="project-container reveal">
+                <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+                    <span>2025</span>
+                    <div>
+                        <div class="project-title">OOP Trivia Engine</div>
+                        <div><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP DESIGN</span></div>
+                    </div>
+                    <span class="project-arrow">↓</span>
+                </a>
+                <div class="project-details">
+                    <div class="details-content">
+                        <p>
+                            A C# CLI application demonstrating inheritance, polymorphism, encapsulation, and abstraction through a custom
+                            question-mapping engine.
+                        </p>
+                        <div class="details-links">
+                            <a href="#" class="hero-link">Documentation ↗</a>
+                            <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Footer: location and copyright year -->
-<footer>
-  <span>Matthew Xu — Melbourne, AU</span>
-  <span>2026</span>
-</footer>
+            <!-- Project 4: AI-assisted note-taking app -->
+            <div class="project-container reveal">
+                <a href="javascript:void(0)" class="project-item" onclick="toggleProject(this)">
+                    <span>2026</span>
+                    <div>
+                        <div class="project-title">Smart Sticky Notes</div>
+                        <div><span class="tag">REACT</span><span class="tag">TYPESCRIPT</span><span class="tag">CLAUDE API</span></div>
+                    </div>
+                    <span class="project-arrow">↓</span>
+                </a>
+                <div class="project-details">
+                    <div class="details-content">
+                        <p>
+                            AI-powered note application featuring natural language organization and context-aware suggestions integrated
+                            with the Claude API.
+                        </p>
+                        <div class="details-links">
+                            <a href="#" class="hero-link">Live App ↗</a>
+                            <a href="https://github.com/matthxu" class="hero-link">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Custom cursor layers for interactive pointer effect -->
-<div id="cur"></div>
-<div id="cur-r"></div>
+        <!-- SKILLS: grouped summary of languages, frameworks, and tools -->
+        <section id="skills">
+            <div class="sec-label">Skills</div>
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>JavaScript / TypeScript</li>
+                        <li>Python</li>
+                        <li>C# / C++</li>
+                        <li>SQL</li>
+                        <li>PHP</li>
+                        <li>HTML / CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul class="skill-list">
+                        <li>React.js</li>
+                        <li>Vue.js</li>
+                        <li>Node.js / Express.js</li>
+                        <li>FastAPI</li>
+                        <li>Tailwind / Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Databases & Tools</h3>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>Docker</li>
+                        <li>Git / GitHub</li>
+                        <li>Jira / Agile</li>
+                        <li>Vercel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<!-- Page behavior: cursor and reveal interactions -->
-<script src="scripts.js"></script>
-</body>
+        <!-- CONTACT: direct channels for collaboration and networking -->
+        <section id="contact">
+            <div class="sec-label">Contact</div>
+            <div class="contact-grid">
+                <div class="reveal">
+                    <h2 class="contact-title">Let's work<br /><em>together</em></h2>
+                </div>
+                <div class="reveal">
+                    <a href="mailto:matthew.xu191@gmail.com" class="c-link"
+                        ><span>matthew.xu191@gmail.com</span><span class="c-arr">↗</span></a
+                    >
+                    <a href="https://github.com/matthxu" class="c-link" target="_blank"
+                        ><span>GitHub — matthxu</span><span class="c-arr">↗</span></a
+                    >
+                    <a href="https://www.linkedin.com/in/mxu00/" class="c-link" target="_blank"
+                        ><span>LinkedIn</span><span class="c-arr">↗</span></a
+                    >
+                    <a href="" class="c-link" target="_blank"><span>Download Resume</span><span class="c-arr">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer: location and copyright year -->
+        <footer>
+            <span>Matthew Xu — Melbourne, AU</span>
+            <span>2026</span>
+        </footer>
+
+        <!-- Custom cursor layers for interactive pointer effect -->
+        <div id="cur"></div>
+        <div id="cur-r"></div>
+
+        <!-- Page behavior: cursor and reveal interactions -->
+        <script src="./scripts.js"></script>
+    </body>
 </html>
