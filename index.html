@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="styles.css" rel="stylesheet">
-<script src="scripts.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
@@ -76,51 +75,49 @@
   </div>
 </section>
 
-<!-- PROJECTS: card grid -->
-<section id="projects">
-  <div class="sec-label">Selected Projects</div>
-  <div class="projects-grid">
+<!-- WORK -->
+<section id="work">
+  <div style="text-transform: uppercase; font-size: 11px; margin-bottom: 3rem;">Selected Work</div>
+  
+  <a href="#" class="project-item">
+    <span>2026</span>
+    <div>
+      <div class="project-title">Tecket Event Management</div>
+      <p style="color: var(--fg-muted); font-size: 13px;">Full-stack User History module for real-world clients using Vue.js and Prisma.</p>
+      <div><span class="tag">VUE.JS</span><span class="tag">PRISMA</span><span class="tag">AGILE</span></div>
+    </div>
+    <span style="text-align: right;">↗</span>
+  </a>
 
-    <a href="#" class="project-card reveal">
-      <span class="card-arrow">↗</span>
-      <span class="card-num">01</span>
-      <div class="card-title">AI Phishing Detection</div>
-      <p class="card-desc">Full-stack application with a RandomForestClassifier that classifies phishing URLs in real time. React frontend with a Python FastAPI backend linked to automated model prediction endpoints.</p>
-      <div class="card-tags">
-        <span class="card-tag">Python</span>
-        <span class="card-tag">FastAPI</span>
-        <span class="card-tag">Scikit-Learn</span>
-        <span class="card-tag">React</span>
-        <span class="card-tag">ML</span>
-      </div>
-    </a>
+  <a href="#" class="project-item">
+    <span>2025</span>
+    <div>
+      <div class="project-title">AI Phishing Detection</div>
+      <p style="color: var(--fg-muted); font-size: 13px;">Machine learning classifier with an asynchronous Python FastAPI backend and scikit-learn models.</p>
+      <div><span class="tag">PYTHON</span><span class="tag">ML</span><span class="tag">FASTAPI</span></div>
+    </div>
+    <span style="text-align: right;">↗</span>
+  </a>
 
-    <a href="#" class="project-card reveal">
-      <span class="card-arrow">↗</span>
-      <span class="card-num">02</span>
-      <div class="card-title">OOP Trivia Engine</div>
-      <p class="card-desc">C# application demonstrating all four OOP principles. An abstract base Question class extended by MultipleChoiceQuestion and TrueFalseQuestion subclasses — inheritance, polymorphism, encapsulation and abstraction applied deliberately.</p>
-      <div class="card-tags">
-        <span class="card-tag">C#</span>
-        <span class="card-tag">.NET</span>
-        <span class="card-tag">OOP Design</span>
-      </div>
-    </a>
+  <a href="#" class="project-item">
+    <span>2025</span>
+    <div>
+      <div class="project-title">OOP Trivia Engine</div>
+      <p style="color: var(--fg-muted); font-size: 13px;">C# application demonstrating all four OOP principles with abstract base classes and polymorphism.</p>
+      <div><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">OOP DESIGN</span></div>
+    </div>
+    <span style="text-align: right;">↗</span>
+  </a>
 
-    <a href="#" class="project-card reveal">
-      <span class="card-arrow">↗</span>
-      <span class="card-num">03</span>
-      <div class="card-title">Smart Sticky Notes<br><span style="font-size:1rem; font-family:var(--mono); color:var(--accent); font-weight:300;">— in progress</span></div>
-      <p class="card-desc">AI-powered note application with natural language organisation, smart tagging and context-aware suggestions. Built with React and TypeScript, integrated with the Claude API.</p>
-      <div class="card-tags">
-        <span class="card-tag">React</span>
-        <span class="card-tag">TypeScript</span>
-        <span class="card-tag">Claude API</span>
-        <span class="card-tag">AI</span>
-      </div>
-    </a>
-
-  </div>
+  <a href="#" class="project-item">
+    <span>2026</span>
+    <div>
+      <div class="project-title">Smart Sticky Notes</div>
+      <p style="color: var(--fg-muted); font-size: 13px;">AI-powered note application with natural language organisation and context-aware suggestions powered by Claude.</p>
+      <div><span class="tag">REACT</span><span class="tag">TYPESCRIPT</span><span class="tag">CLAUDE API</span></div>
+    </div>
+    <span style="text-align: right;">↗</span>
+  </a>
 </section>
 
 <!-- SKILLS -->
@@ -187,5 +184,6 @@
 <div id="cur"></div>
 <div id="cur-r"></div>
 
+<script src="scripts.js"></script>
 </body>
 </html>
