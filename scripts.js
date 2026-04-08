@@ -76,6 +76,18 @@ sections.forEach((s) => navObs.observe(s))
 // Dynamic footer year
 document.getElementById("footer-year").textContent = new Date().getFullYear()
 
+// Copy email to clipboard on click
+const emailLink = document.getElementById("email-link")
+const emailText = document.getElementById("email-text")
+
+emailLink.addEventListener("click", (e) => {
+    e.preventDefault()
+    navigator.clipboard.writeText("matthew.xu191@gmail.com").then(() => {
+        emailText.textContent = "Copied!"
+        setTimeout(() => (emailText.textContent = "matthew.xu191@gmail.com"), 2000)
+    })
+})
+
 // Work section accordion: expand selected project and collapse others
 function toggleProject(element) {
     const container = element.parentElement
