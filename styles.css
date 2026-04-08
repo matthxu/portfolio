@@ -563,7 +563,7 @@ footer {
     .hero-left {
         border-right: none;
         border-bottom: 1px solid var(--border);
-        min-height: 55vh;
+        min-height: 45vh;
     }
     .projects-grid {
         grid-template-columns: 1fr;
@@ -577,10 +577,14 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
     nav {
-        padding: 1.2rem 1.5rem;
+        padding: 1rem 1.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
     nav ul {
-        display: none;
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
     }
     section {
         padding: 4rem 1.5rem;
@@ -588,5 +592,55 @@ footer {
     .hero-left,
     .hero-right {
         padding: 2.5rem 1.5rem;
+    }
+    .project-item {
+        grid-template-columns: 55px 1fr 36px;
+    }
+    .details-content {
+        padding: 0 0 2rem 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-item {
+        grid-template-columns: 44px 1fr 28px;
+        padding: 1.4rem 0;
+    }
+    .project-title {
+        font-size: 1.4rem;
+    }
+    .details-content {
+        padding: 0 0 1.5rem 44px;
+    }
+    .hero-statement {
+        font-size: 1.6rem;
+    }
+    .hero-right-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .hero-right-top p {
+        max-width: 100%;
+    }
+    nav ul {
+        gap: 0.9rem;
+    }
+    footer {
+        padding: 1.2rem 1.5rem;
+    }
+}
+
+/* Disable custom cursor on touch / pointer-coarse devices */
+@media (hover: none), (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+    #cur,
+    #cur-r {
+        display: none;
     }
 }
