@@ -53,6 +53,26 @@ const obs = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => obs.observe(el))
 
+// Active nav: highlight the link matching the section currently in view
+const navLinks = document.querySelectorAll("nav ul a")
+const sections = document.querySelectorAll("section, .hero")
+
+const navObs = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id
+                navLinks.forEach((a) => {
+                    a.classList.toggle("nav-active", a.getAttribute("href") === `#${id}`)
+                })
+            }
+        })
+    },
+    { threshold: 0.3 },
+)
+
+sections.forEach((s) => navObs.observe(s))
+
 // Work section accordion: expand selected project and collapse others
 function toggleProject(element) {
     const container = element.parentElement

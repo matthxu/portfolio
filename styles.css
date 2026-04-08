@@ -103,6 +103,10 @@ nav a {
 nav a:hover {
     color: var(--fg);
 }
+nav a.nav-active {
+    color: var(--fg);
+    border-bottom: 1px solid var(--accent);
+}
 
 /* ── HERO: Split layout ── */
 .hero {
