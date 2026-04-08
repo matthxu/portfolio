@@ -76,6 +76,17 @@ sections.forEach((s) => navObs.observe(s))
 // Dynamic footer year
 document.getElementById("footer-year").textContent = new Date().getFullYear()
 
+// Back to top button: show after scrolling past the hero
+const backToTop = document.getElementById("back-to-top")
+
+window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("visible", window.scrollY > window.innerHeight * 0.8)
+})
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+})
+
 // Copy email to clipboard on click
 const emailLink = document.getElementById("email-link")
 const emailText = document.getElementById("email-text")
