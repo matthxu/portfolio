@@ -73,6 +73,9 @@ const navObs = new IntersectionObserver(
 
 sections.forEach((s) => navObs.observe(s))
 
+// Dynamic footer year
+document.getElementById("footer-year").textContent = new Date().getFullYear()
+
 // Work section accordion: expand selected project and collapse others
 function toggleProject(element) {
     const container = element.parentElement
